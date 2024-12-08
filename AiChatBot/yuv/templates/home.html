@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAALE SUDHARJA</title>
+
+  <title>Blockchain & Crypto AI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+      z-index: 1;
+      padding: 1rem;
+      /* Add padding for smaller screens */
+    }
+
+    .left-text {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .right-links {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .right-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .right-links a:hover {
+      color: #ff00ff;
+    }
+
+    .right-links img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .right-links img:hover {
+      transform: scale(1.2);
+    }
+
+    .title {
+      font-size: 4.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #ff00ff, #9a1eff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      /* Stack buttons on smaller screens */
+      gap: 1rem;
+    }
+
+    .buttons button {
+      padding: 1.2rem 2.5rem;
+      font-size: 1.4rem;
+      background-color: #ff00ff;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .buttons button:hover {
+      background-color: #9400d3;
+    }
+
+    .gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: radial-gradient(circle at var(--x) var(--y), #ff00ff, #9a1eff);
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .left-text {
+        top: 1rem;
+        left: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .right-links {
+        top: 1rem;
+        right: 1rem;
+      }
+
+      .right-links img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .title {
+        font-size: 3rem;
+      }
+
+      .subtitle {
+        font-size: 1.8rem;
+      }
+
+      .buttons button {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .left-text {
+        top: 0.5rem;
+        left: 0.5rem;
+        font-size: 1rem;
+      }
+
+      .right-links {
+        top: 0.5rem;
+        right: 0.5rem;
+      }
+
+      .right-links img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+      }
+
+      .buttons button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+
+      .buttons {
+        gap: 0.8rem;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      /* Space between icons */
+      justify-content: center;
+      /* Center the icons */
+      margin-top: 2rem;
+      /* Optional spacing from top */
+    }
+
+    .social-links a {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+
+    .social-icon1 {
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon2 {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon3 {
+      width: 38px;
+      height: 38px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.3);
+      /* Slight zoom on hover */
+    }
+
+    .right-links {
+      position: relative;
+      z-index: 10;
+    }
+
+    .gradient-overlay {
+      pointer-events: none;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    .left-text {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .right-links {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .right-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .right-links a:hover {
+      color: #ff00ff;
+    }
+
+    .subtitle {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .buttons button {
+      padding: 1.2rem 2.5rem;
+      font-size: 1.4rem;
+      background-color: #ff00ff;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .buttons button:hover {
+      background-color: #9400d3;
+    }
+
+    .gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: radial-gradient(circle at var(--x) var(--y), #ff00ff, #9a1eff);
+      opacity: 0.2;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gradient-overlay"></div>
+  <div class="left-text">AI Chatbot</div>
+  <div class="right-links">
+    <a href="https://github.com/Yuv15" target="_blank" rel="noopener noreferrer">
+      <img src="{{url_for('static',filename='github.png')}}" alt="GitHub Logo" class="social-icon1" />
+    </a>
+    <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+      <img src="{{url_for('static',filename='discord.png')}}" alt="Discord Logo" class="social-icon2" />
+    </a>
+    <a href="https://x.com/Yuvrajkaushik04" target="_blank" rel="noopener noreferrer">
+      <img src="{{url_for('static',filename='twitter.png')}}" alt="Twitter Logo" class="social-icon3" />
+    </a>
+  </div>
+
+
+
+  </div>
+  <div class="container">
+    <h1 class="title">Blockchain & Crypto AI</h1>
+    <p class="subtitle">Scalable AI.</p>
+    <div class="buttons">
+      <a href="/index">
+        <button>Get started</button>
+      </a>
+      
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      document.documentElement.style.setProperty('--x', `${e.clientX}px`);
+      document.documentElement.style.setProperty('--y', `${e.clientY}px`);
+    });
+  </script>
+</body>
+
+</html>
